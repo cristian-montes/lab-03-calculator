@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply,} from '../calculations.js';
+import { add, subtract, multiply, devide, } from '../calculations.js';
 
 // reference needed DOM elements
 // ADD
@@ -20,6 +20,11 @@ const multiplyYInput = document.getElementById('multiply-y-input');
 const multiplyBtn = document.getElementById('multiply-btn');
 const multiplyResult = document.getElementById('multiply-result');
 
+//DEVIDE
+const devideXInput = document.getElementById('devide-x-input');
+const devideYInput = document.getElementById('devide-y-input');
+const devideBtn = document.getElementById('devide-btn');
+const devideResult = document.getElementById('devide-result');
 
 // ADD + EVENT LISTENER
 addBtn.addEventListener('click', () => {
@@ -39,9 +44,18 @@ subtractBtn.addEventListener('click', () =>{
 
 //MULTIPLY - EVENT LISTENER
 multiplyBtn.addEventListener('click', () =>{
-  const x = Number(multiplyXInput.value);
-  const y = Number(multiplyYInput.value);
-  const multiplication = multiply(x, y);
-  multiplyResult.textContent = multiplication;
+    const x = Number(multiplyXInput.value);
+    const y = Number(multiplyYInput.value);
+    const multiplication = multiply(x, y);
+    multiplyResult.textContent = multiplication;
 });
+
+//DEVIDE - EVENT LISTERN
+devideBtn.addEventListener('click', () => {
+    const x = Number(devideXInput.value);
+    const y = Number(devideYInput.value);
+    const division = devide(x, y);
+    devideResult.textContent = division;
+});
+
   

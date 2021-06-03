@@ -12,3 +12,8 @@ export function subtract(x, y){
 export function multiply(x, y){
     return x * y;
 }
+
+//DEVIDE FUNCTION
+export function devide(x, y){
+    return x / y;
+}
