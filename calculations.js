@@ -17,3 +17,8 @@ export function multiply(x, y){
 export function devide(x, y){
     return x / y;
 }
+
+//MODULO FUNCTION
+export function modulo(x, y){
+    return x % y;
+}

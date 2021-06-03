@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, devide, } from '../calculations.js';
+import { add, subtract, multiply, devide, modulo, } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -57,6 +57,21 @@ test('devide two numbers', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = devide(100, 5); // use your function here
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+// MODULO TEST
+test('reminder of two numbers', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 2;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = modulo(12, 5); // use your function here
 
     //Expect
     // Make assertions about what is expected versus the actual result

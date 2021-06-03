@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, devide, } from '../calculations.js';
+import { add, subtract, multiply, devide, modulo, } from '../calculations.js';
 
 // reference needed DOM elements
 // ADD
@@ -26,6 +26,12 @@ const devideYInput = document.getElementById('devide-y-input');
 const devideBtn = document.getElementById('devide-btn');
 const devideResult = document.getElementById('devide-result');
 
+//MODULO
+const moduloXInput = document.getElementById('modulo-x-input');
+const moduloYInput = document.getElementById('modulo-y-input');
+const moduloBtn = document.getElementById('modulo-btn');
+const moduloResult = document.getElementById('modulo-result');
+
 // ADD + EVENT LISTENER
 addBtn.addEventListener('click', () => {
     const x = Number(addXInput.value);
@@ -50,7 +56,7 @@ multiplyBtn.addEventListener('click', () =>{
     multiplyResult.textContent = multiplication;
 });
 
-//DEVIDE - EVENT LISTERN
+//DEVIDE - EVENT LISTERNER
 devideBtn.addEventListener('click', () => {
     const x = Number(devideXInput.value);
     const y = Number(devideYInput.value);
@@ -58,4 +64,10 @@ devideBtn.addEventListener('click', () => {
     devideResult.textContent = division;
 });
 
-  
+ // MODULO - EVENT LISTERNER 
+ moduloBtn.addEventListener('click', () => {
+    const x = Number(moduloXInput.value);
+    const y = Number(moduloYInput.value);
+    const reminder = modulo(x, y);
+    moduloResult.textContent = reminder;
+ });
