@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, devide, modulo, } from '../calculations.js';
+import { add, subtract, multiply, devide, modulo, integer, aBC, } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -72,6 +72,37 @@ test('reminder of two numbers', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = modulo(12, 5); // use your function here
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+// INTEGER TEST
+test('integer of two numbers', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 3;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = integer(10, 3); // use your function here
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+// P.. THEOREM TEST
+test('Hypotenuse Length', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 5;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    // eslint-disable-next-line new-cap
+    const actual = aBC(3, 4); // use your function here
 
     //Expect
     // Make assertions about what is expected versus the actual result

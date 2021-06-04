@@ -22,3 +22,11 @@ export function devide(x, y){
 export function modulo(x, y){
     return x % y;
 }
+//INTEGER FUNCTION
+export function integer(x, y){
+    return Math.floor(x / y);
+}
+// P.. THEOREM FUCTION
+export function aBC(a, b){
+    return Math.sqrt(a ** 2 + b ** 2);
+}
